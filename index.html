@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="side panel">
+        <a id="home" class="menuoption selected" href="#Home" onclick="menuSelect('home');">Home</a>
+        <a id="video" class="menuoption" href="#Video" onclick="menuSelect('video');">Video</a>
+        <a id="introduction" class="menuoption" href="#Introduction" onclick="menuSelect('introduction');"
+          >Introduction</a
+        >
+        <a id="future" class="menuoption" href="#Future" onclick="menuSelect('future');">Future</a>
+      </div>
+      <div class="main">
+        <div class="panel " id="Home">
+          <div class="row">
+            <div class="col">
+              <div class="text">
+                My name is Han Jing, you can also call me clara. I am an
+                outgoing, positive and optimistic person. I like to make friends
+                and interact with different people. At the same time, I am also
+                a very patient person, and I hope to become a teacher in the
+                future. So I am very interested in educational psychology and
+                hope that this knowledge can enhance my knowledge and help me
+                become better.
+              </div>
+            </div>
+            <div class="col img">
+              <image class="img" src="media/Head.jpg"></image>
+            </div>
+          </div>
+        </div>
+        <div class="panel" id="Video">
+          <video class="video" controls src="media/video.mp4"></video>
+        </div>
+        
+        <div class="panel" id="Introduction">
+          <div class="row">
+            <div class="col">
+              <div class="text" style="font-size:30px;">
+                Graduated from the High School Affiliated to Capital Normal
+                University CGPA3.80 Freeman of Volleyball Player I am an
+                optimistic, positive, patient and responsible person. In life, I
+                am good at listening to others’ suggestions and reflecting on
+                myself and helping others solve problems. When I was in high
+                school, because I liked art, I participated in school club
+                activities many times and represented the school in art
+                competitions and won the city honor. My specialty is volleyball,
+                painting and singing. I have been learning volleyball since
+                junior high school and have won some awards. I also like sports
+                very much. I think a lot of exercise can exercise my
+                perseverance and endurance.
+              </div>
+            </div>
+            <div class="col img">
+              <image class="img" src="media/Hobby.jpg"></image>
+            </div>
+          </div>
+        </div>
+        <div class="panel" id="Future">
+          <div class="text">
+            I hope I can become a responsible and appealing educator. I long for
+            my students to gain knowledge from me, find their own value and make
+            progress with me. We all know that the factor of a good teacher is
+            that we can mobilize the enthusiasm of students and how much
+            progress they will make. In addition, I hope that the most important
+            factors in my teaching career should be the ability to solve complex
+            problems, teaching and learning strategies, and critical reflection.
+            As shown in educational psychology textbooks, these professional
+            knowledge will improve our learning and teaching quality and tell us
+            how to become a qualified teacher. I hope that through the study of
+            professional courses, I will observe the behavior of students in
+            groups or individuals, understand their ideas, and change teaching
+            strategies in time. Finally, I hope I can be guided by my mentor and
+            suggestions from my friends. Because from suggestions or criticisms,
+            I will get emotional and professional support.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function menuSelect (para) {
+      let title = para;
+      title = title.charAt(0).toUpperCase() + title.slice(1);
+      document.getElementById("video").classList.remove('selected');
+      document.getElementById("home").classList.remove('selected');
+      document.getElementById("introduction").classList.remove('selected');
+      document.getElementById("future").classList.remove('selected');
+      document.getElementById(para).classList.add('selected');
+      document.title = title;
+    }
+  </script>
+</html>
